@@ -23,8 +23,8 @@ function App() {
       <div className={classes.root}>
         <Header />
         <Routes>
-          <Route path="/" component={Homepage} exact />
-          <Route path="/coins/:id" component={CoinPage} />
+          <Route path="/" element={<Homepage />} exact />
+          <Route path="/coins/:id" element={<CoinPage />} />
         </Routes>
       </div>
     </BrowserRouter>

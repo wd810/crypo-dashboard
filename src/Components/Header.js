@@ -2,6 +2,7 @@ import { AppBar, MenuItem, Select, Toolbar, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { Container } from '@mui/system';
 import React from 'react';
+import { useNavigate } from 'react-router-dom'
 
 const useStyles = makeStyles(() => ({
     title: {
@@ -14,15 +15,16 @@ const useStyles = makeStyles(() => ({
 }))
 
 function Header(props) {
-    
 
     const classes = useStyles()
+    const navigate = useNavigate()
 
     return (
         <AppBar color='transparent' position='static'>
             <Container>
                 <Toolbar>
-                    <Typography className={classes.title}>Crypto Dashboard</Typography>
+                    <Typography onClick={() => navigate("/")}
+                                className={classes.title}>Crypto Dashboard</Typography>
 
                     <Select 
                         variant='outlined'
